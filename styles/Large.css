@@ -1,0 +1,31 @@
+@media (min-width: 640px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  section {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  header {
+    justify-content: space-around;
+  }
+
+  .filters {
+    text-align: center;
+  }
+}

@@ -1,0 +1,93 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+header, footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.site-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+#menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  background-color: #004aad;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+}
+
+nav a:hover, nav a.active {
+  background-color: #003680;
+}
+
+.show {
+  display: flex;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.filters button {
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #004aad;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.filters button:hover {
+  background-color: #003680;
+}
+
+.course-card {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+footer a {
+  color: white;
+  text-decoration: underline;
+}

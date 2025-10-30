@@ -3,17 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Normalization Example</title>
+  <meta name="description" content="WDD231 Course Home Page for Mduduzi Mashanda">
+  <meta name="author" content="Mduduzi Mashanda">
+  <title>WDD231 - Course Home Page | Mduduzi Mashanda</title>
 
-  <!-- 1️⃣ Normalize CSS first -->
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
 
-  <!-- 2️⃣ Your own CSS next -->
-  <link rel="stylesheet" href="styles/style.css">
+  <!-- JavaScript -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
+
 <body>
-  <h1>Hello World</h1>
-  <p>This page uses normalize.css to keep styles consistent.<p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates culpa corporis magni voluptate molestiae ducimus sint, voluptas saepe ratione accusamus incidunt sunt, iusto maxime similique dolorem! Magni, eveniet ipsum! Officiis!<p>
+  <header>
+    <img src="images/logo.svg" alt="Site Logo" class="logo">
+    <span class="site-name">Mduduzi Mashanda</span>
+    <button id="menu" aria-label="menu">&#9776;</button>
+
+    <nav id="navMenu">
+      <a href="index.html" class="active">Home</a>
+      <a href="#">Chamber</a>
+      <a href="#">Final</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section>
+      <h2>About This Course</h2>
+      <p>Welcome to WDD231! This course home page showcases my progress and web development journey using HTML, CSS, and JavaScript.</p>
+    </section>
+
+    <section id="certificate">
+      <h2>Certificate Courses</h2>
+      <div id="courseContainer"></div>
+      <div class="filters">
+        <button id="all">All Courses</button>
+        <button id="wdd">WDD Courses</button>
+        <button id="cse">CSE Courses</button>
+      </div>
+      <p>Total Credits: <span id="totalCredits"></span></p>
+    </section>
+
+    <section>
+      <h2>Learning Goals</h2>
+      <p>My goal is to strengthen my skills in responsive web design, accessibility, and modern JavaScript interactivity.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/saturo23" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/mduduzi-mashanda-395051357" target="_blank">LinkedIn</a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> | Mduduzi Mashanda | Zimbabwe</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
