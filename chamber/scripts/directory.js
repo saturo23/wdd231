@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Handle missing or broken images
       const imageSrc = member.image
         ? `images/${member.image}`
-        : "images/placeholder.png"; // optional default image
+        : "images/placeholder.png"; 
 
       card.innerHTML = `
         <img src="${imageSrc}" alt="Logo of ${member.name}" onerror="this.src='images/placeholder.png'">
