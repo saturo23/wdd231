@@ -8,20 +8,14 @@
   <meta name="author" content="Mduduzi Mashanda">
 
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-
-  <!-- Facebook Open Graph Meta -->
-  <meta property="og:title" content="Bulawayo Chamber of Commerce Directory">
-  <meta property="og:description" content="Discover Bulawayo businesses and organizations through our Chamber directory.">
-  <meta property="og:image" content="images/social-preview.jpg">
-  <meta property="og:url" content="https://yourdomain.github.io/wdd231/chamber/directory.html">
+  <link rel="icon" href="../favicon.ico">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="/wdd231/chamber/styles/normalize.css">
+  <link rel="stylesheet" href="/wdd231/chamber/styles/base.css">
 
   <!-- JS -->
-  <script src="scripts/directory.js" defer></script>
+  <script src="/wdd231/chamber/scripts/directory.js" defer></script>
 </head>
 <body>
 
@@ -30,7 +24,7 @@
     <nav>
       <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
       <ul id="nav-menu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="../index.html">Home</a></li>
         <li><a href="discover.html">Discover</a></li>
         <li><a href="directory.html" class="active">Directory</a></li>
         <li><a href="join.html">Join</a></li>
@@ -64,6 +58,10 @@
     menuToggle.addEventListener('click', () => {
       navMenu.classList.toggle('active');
     });
+
+    // Footer info
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
   </script>
 
 </body>
