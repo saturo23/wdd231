@@ -3,19 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bulawayo Chamber of Commerce Directory</title>
-  <meta name="description" content="Explore the Bulawayo Chamber of Commerce directory and connect with businesses that shape our city's economic future.">
+  <title>Bulawayo Chamber of Commerce Directory | Mduduzi Mashanda</title>
+  <meta name="description" content="Explore the Bulawayo Chamber of Commerce directory and discover local businesses shaping the city’s economy.">
   <meta name="author" content="Mduduzi Mashanda">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Bulawayo Chamber of Commerce Directory | Mduduzi Mashanda">
+  <meta property="og:description" content="Explore the Bulawayo Chamber of Commerce directory and discover local businesses shaping the city’s economy.">
+  <meta property="og:image" content="https://saturo23.github.io/wdd231/chamber/images/social-preview.jpg">
+  <meta property="og:url" content="https://saturo23.github.io/wdd231/chamber/directory.html">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/wdd231/chamber/styles/normalize.css">
-  <link rel="stylesheet" href="/wdd231/chamber/styles/base.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
 
   <!-- JS -->
-  <script src="/wdd231/chamber/scripts/directory.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </head>
 <body>
 
@@ -50,19 +56,6 @@
     <p>Created by Mduduzi Mashanda | WDD 231</p>
     <p>Last Modified: <span id="last-modified"></span></p>
   </footer>
-
-  <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    // Footer info
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('last-modified').textContent = document.lastModified;
-  </script>
 
 </body>
 </html>

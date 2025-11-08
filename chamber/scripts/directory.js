@@ -70,6 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // === Mobile menu toggle ===
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  }
+
   // === Footer Info ===
   const yearEl = document.getElementById("year");
   const lastModifiedEl = document.getElementById("last-modified");
