@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Bulawayo Coffee Co.",
+    "address": "12 Main Street, Bulawayo",
+    "phone": "+263 9 600123",
+    "website": "https://bulawayocoffee.co.zw",
+    "image": "coffee.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "TechLink Solutions",
+    "address": "45 Herbert Chitepo St, Bulawayo",
+    "phone": "+263 9 654321",
+    "website": "https://techlinkzw.com",
+    "image": "techlink.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Matobo Lodge & Safari",
+    "address": "Matobo Hills, Bulawayo",
+    "phone": "+263 9 789456",
+    "website": "https://matobolodge.co.zw",
+    "image": "lodge.png",
+    "membershipLevel": 3
+  },
+  {
+    "name": "PrintWorks Bulawayo",
+    "address": "Leopold Takawira Ave, Bulawayo",
+    "phone": "+263 9 987654",
+    "website": "https://printworks.co.zw",
+    "image": "printshop.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "CleanPro Services",
+    "address": "Ascot, Bulawayo",
+    "phone": "+263 9 443211",
+    "website": "https://cleanprozw.com",
+    "image": "cleanpro.png",
+    "membershipLevel": 2
+  },
+  {
+    "name": "FoodHub Grocers",
+    "address": "Lobengula St, Bulawayo",
+    "phone": "+263 9 555333",
+    "website": "https://foodhub.co.zw",
+    "image": "foodhub.png",
+    "membershipLevel": 1
+  },
+  {
+    "name": "SolarPlus Energy",
+    "address": "Jason Moyo St, Bulawayo",
+    "phone": "+263 9 123987",
+    "website": "https://solarpluszw.com",
+    "image": "solarplus.png",
+    "membershipLevel": 3
+  }
+]

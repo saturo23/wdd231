@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulawayo Chamber of Commerce Directory</title>
+  <meta name="description" content="Explore the Bulawayo Chamber of Commerce directory and connect with businesses that shape our city's economic future.">
+  <meta name="author" content="Mduduzi Mashanda">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Facebook Open Graph Meta -->
+  <meta property="og:title" content="Bulawayo Chamber of Commerce Directory">
+  <meta property="og:description" content="Discover Bulawayo businesses and organizations through our Chamber directory.">
+  <meta property="og:image" content="images/social-preview.jpg">
+  <meta property="og:url" content="https://yourdomain.github.io/wdd231/chamber/directory.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+
+  <!-- JS -->
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Bulawayo Chamber of Commerce</h1>
+    <nav>
+      <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Business Directory</h2>
+
+    <section class="view-toggle">
+      <button id="grid-view">🔳 Grid View</button>
+      <button id="list-view">📋 List View</button>
+    </section>
+
+    <section id="member-container" class="grid-view">
+      <!-- Member cards will be injected here by JavaScript -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Bulawayo Chamber of Commerce</p>
+    <p>Created by Mduduzi Mashanda | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

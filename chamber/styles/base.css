@@ -1,0 +1,179 @@
+/* === RESET & BASE STYLES === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2 {
+  color: #1e3a8a; /* deep appealing blue */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* === HEADER & NAV === */
+header {
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a); /* soft gradient */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Menu toggle button for mobile */
+#menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  #menu-toggle { display: inline-block; }
+  nav ul { display: none; flex-direction: column; width: 100%; }
+  nav ul.active { display: flex; }
+}
+
+/* === MAIN CONTENT === */
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* View toggle buttons */
+.view-toggle {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.view-toggle button {
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.view-toggle button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+}
+
+/* === DIRECTORY GRID & LIST STYLES === */
+#member-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Member card base styles */
+.member-card {
+  background: white;
+  border-radius: 10px;
+  border: 2px solid #ddd; /* default for standard members */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Membership Level Styling */
+.member-level-3 { border-color: gold; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3); }
+.member-level-2 { border-color: silver; box-shadow: 0 4px 12px rgba(192,192,192,0.3); }
+.member-level-1 { border-color: #ddd; }
+
+.member-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.member-card h3 {
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+#member-container.list-view {
+  display: block;
+}
+
+.list-view .member-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 1rem 1.5rem;
+}
+
+.list-view .member-card img {
+  margin-right: 1rem;
+}
+
+/* Smooth transitions for view toggles */
+.grid-view .member-card, .list-view .member-card {
+  transition: all 0.3s ease;
+}
+
+/* === FOOTER === */
+footer {
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 600px) {
+  .list-view .member-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .list-view .member-card img {
+    margin: 0 0 0.5rem 0;
+  }
+}
