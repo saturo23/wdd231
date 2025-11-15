@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulawayo Chamber of Commerce | Home</title>
+  <meta name="description" content="Welcome to the Bulawayo Chamber of Commerce. Discover local businesses, events, and opportunities to engage with our community.">
+  <meta name="author" content="Mduduzi Mashanda">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="Bulawayo Chamber of Commerce | Home">
+  <meta property="og:description" content="Connect with local businesses and explore the Bulawayo Chamber of Commerce.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/index.html">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <h1>Bulawayo Chamber of Commerce</h1>
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Bulawayo City Skyline">
+      <div class="hero-text">
+        <h2>Welcome to the Bulawayo Chamber of Commerce</h2>
+        <p>Supporting local businesses and strengthening our community.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </div>
+    </section>
+
+    <!-- Current Events Section -->
+    <section class="current-events">
+      <h2>Current Events</h2>
+      <ul>
+        <li>Bulawayo Business Expo — Nov 20</li>
+        <li>Local Networking Meetup — Dec 5</li>
+        <li>Entrepreneur Workshop — Dec 12</li>
+      </ul>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Weather in Bulawayo</h2>
+      <div id="current-weather">
+        <p>Loading weather...</p>
+      </div>
+      <div id="forecast">
+        <!-- Three-day forecast appears here -->
+      </div>
+    </section>
+
+    <!-- Spotlight Members Section -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container">
+        <!-- Random gold/silver members appear here -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Bulawayo Chamber of Commerce</p>
+    <p>Created by Mduduzi Mashanda | WDD 231</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+  <!-- JS -->
+  <script src="scripts/home.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>
