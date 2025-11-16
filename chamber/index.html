@@ -4,88 +4,119 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bulawayo Chamber of Commerce | Home</title>
+
   <meta name="description" content="Welcome to the Bulawayo Chamber of Commerce. Discover local businesses, events, and opportunities to engage with our community.">
   <meta name="author" content="Mduduzi Mashanda">
 
-  <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
 
-  <!-- Facebook Open Graph -->
+  <!-- Social Share -->
   <meta property="og:title" content="Bulawayo Chamber of Commerce | Home">
   <meta property="og:description" content="Connect with local businesses and explore the Bulawayo Chamber of Commerce.">
-  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:image" content="pictures/bulawayo-city-skyline.jpg">
   <meta property="og:url" content="https://username.github.io/wdd231/chamber/index.html">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bulawayo Chamber of Commerce | Home">
+  <meta name="twitter:description" content="Connect with local businesses and explore the Bulawayo Chamber of Commerce.">
+  <meta name="twitter:image" content="pictures/bulawayo-city-skyline.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/base.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header>
-    <h1>Bulawayo Chamber of Commerce</h1>
-    <nav>
-      <button id="menu-toggle">☰</button>
-      <ul id="nav-menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Chamber of Commerce</h1>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
+
+        <ul id="nav-menu" class="nav-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="join.html">Join</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- HERO SECTION -->
+  <header class="hero-header">
+    <img src="images/bulawayo-city-skyline.jpg" alt="Bulawayo City Skyline" class="hero-img">
+
+    <div class="hero-text">
+      <h1>Welcome to Bulawayo Chamber of Commerce</h1>
+      <p>Connecting businesses. Empowering growth. Building the City of Kings & Queens.</p>
+    </div>
+  </header>
+
   <main>
-    <!-- Hero Section -->
-    <section class="hero">
-      <img src="images/hero.jpg" alt="Bulawayo City Skyline">
-      <div class="hero-text">
-        <h2>Welcome to the Bulawayo Chamber of Commerce</h2>
-        <p>Supporting local businesses and strengthening our community.</p>
-        <a href="join.html" class="cta-button">Join the Chamber</a>
-      </div>
-    </section>
 
-    <!-- Current Events Section -->
+    <!-- EVENTS -->
     <section class="current-events">
-      <h2>Current Events</h2>
-      <ul>
-        <li>Bulawayo Business Expo — Nov 20</li>
-        <li>Local Networking Meetup — Dec 5</li>
-        <li>Entrepreneur Workshop — Dec 12</li>
-      </ul>
+      <div class="container">
+        <h2>Current Events</h2>
+        <ul>
+          <li>Bulawayo Business Expo — Nov 20</li>
+          <li>Local Networking Meetup — Dec 5</li>
+          <li>Entrepreneur Workshop — Dec 12</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Weather Section -->
+    <!-- WEATHER -->
     <section class="weather">
-      <h2>Weather in Bulawayo</h2>
-      <div id="current-weather">
-        <p>Loading weather...</p>
-      </div>
-      <div id="forecast">
-        <!-- Three-day forecast appears here -->
+      <div class="container">
+        <h2>Weather in Bulawayo</h2>
+        <div id="current-weather"><p>Loading weather...</p></div>
+        <div id="forecast"><p>Three-day forecast will appear here.</p></div>
       </div>
     </section>
 
-    <!-- Spotlight Members Section -->
+    <!-- SPOTLIGHTS -->
     <section class="spotlights">
-      <h2>Member Spotlights</h2>
-      <div id="spotlight-container">
-        <!-- Random gold/silver members appear here -->
+      <div class="container">
+        <h2>Featured Member Spotlights</h2>
+        <div id="spotlight-container">
+          <p>Spotlighted members will appear here.</p>
+        </div>
       </div>
     </section>
+
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; <span id="year"></span> Bulawayo Chamber of Commerce</p>
-    <p>Created by Mduduzi Mashanda | WDD 231</p>
-    <p>Last Modified: <span id="last-modified"></span></p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-links">
+        <a href="index.html">Home</a> |
+        <a href="discover.html">Discover</a> |
+        <a href="directory.html">Directory</a> |
+        <a href="join.html">Join</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/saturo23" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/mduduzi-mashanda-395051357" target="_blank">LinkedIn</a>
+      </div>
+
+      <p>&copy; <span id="year"></span> Bulawayo Chamber of Commerce |
+         Created by Mduduzi Mashanda | WDD 231</p>
+      <p>Last Modified: <span id="last-modified"></span></p>
+
+    </div>
   </footer>
 
   <!-- JS -->
   <script src="scripts/home.js" defer></script>
   <script src="scripts/main.js" defer></script>
+
 </body>
 </html>

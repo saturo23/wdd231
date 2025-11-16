@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${member.address}</p>
           <p>${member.phone}</p>
           <a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>
+          <p>Membership: ${member.membershipLevel === 3 ? "Gold" : member.membershipLevel === 2 ? "Silver" : "Standard"}</p>
         </div>
       `;
 

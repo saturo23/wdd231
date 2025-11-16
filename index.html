@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Welcome to my WDD231 Course Home Page! I'm Mduduzi Mashanda, and this space showcases my web development journey, assignments, projects, and notes.">
   <meta name="author" content="Mduduzi Mashanda">
- 
+
   <title>WDD231 - Course Home Page | Mduduzi Mashanda</title>
+
   <!-- favicon -->
   <link rel="icon" href="favicon.ico">
-  <!-- Google Fonts preconnects -->
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -17,7 +19,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
-  
+
   <!-- JavaScript -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
@@ -25,26 +27,30 @@
 </head>
 
 <body>
+  <!-- Header -->
   <header>
     <img src="images/logo.svg" alt="Site Logo" class="logo">
     <span class="site-name">Mduduzi Mashanda</span>
-    <button id="menu" aria-label="menu">&#9776;</button>
+    <button id="menu" aria-label="Toggle Menu" aria-controls="navMenu" aria-expanded="false">&#9776;</button>
 
     <nav id="navMenu">
       <a href="index.html" class="active">Home</a>
-      <a href="chamber/directory.html">Chamber</a>
+      <a href="chamber/index.html">Chamber Project</a>
       <a href="#">Final</a>
     </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <h1>Home</h1>
+    <h1>Welcome to My Course Home Page</h1>
 
+    <!-- About Section -->
     <section>
       <h2>About This Course</h2>
-      <p>Welcome to WDD231! This course home page showcases my progress and web development journey using HTML, CSS, and JavaScript.</p>
+      <p>Welcome to WDD231! This page showcases my progress and web development journey using HTML, CSS, and JavaScript. Here you will find my assignments, projects, and key learning experiences.</p>
     </section>
 
+    <!-- Certificate Courses -->
     <section id="certificate">
       <h2>Certificate Courses</h2>
       <div id="courseContainer"></div>
@@ -56,18 +62,26 @@
       <p>Total Credits: <span id="totalCredits"></span></p>
     </section>
 
+    <!-- Learning Goals -->
     <section>
       <h2>Learning Goals</h2>
-      <p>My goal is to strengthen my skills in responsive web design, accessibility, and modern JavaScript interactivity.</p>
+      <p>My goal is to strengthen my skills in responsive web design, accessibility, modern JavaScript interactivity, and real-world project implementation.</p>
+    </section>
+
+    <!-- Chamber Project Highlight -->
+    <section>
+      <h2>My Chamber Project</h2>
+      <p>This project demonstrates a dynamic Chamber of Commerce directory with a weather API, spotlight members, and interactive grid/list view toggle.</p>
+      <a href="chamber/index.html" class="cta-button">View Chamber Project</a>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="social">
       <a href="https://github.com/saturo23" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/mduduzi-mashanda-395051357" target="_blank">LinkedIn</a>
     </div>
-
     <p>&copy; <span id="currentyear"></span> | Mduduzi Mashanda | Zimbabwe🌍</p>
     <p id="lastModified"></p>
   </footer>

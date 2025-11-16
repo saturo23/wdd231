@@ -1,9 +1,19 @@
-// === Your API Key ===
+// === API & Coordinates ===
 const apiKey = "6c90a14d67b81dbbfef6e755e5f8f890";
-
-// === Bulawayo Coordinates ===
 const lat = -20.06;
 const lon = 28.52;
+
+// === Map weather description to emojis ===
+function getWeatherEmoji(desc) {
+  desc = desc.toLowerCase();
+  if (desc.includes("cloud")) return "☁️";
+  if (desc.includes("rain")) return "🌧️";
+  if (desc.includes("thunder")) return "⛈️";
+  if (desc.includes("snow")) return "❄️";
+  if (desc.includes("clear")) return "☀️";
+  if (desc.includes("mist") || desc.includes("fog")) return "🌫️";
+  return "🌡️";
+}
 
 // === Fetch Weather Data ===
 async function getWeather() {
@@ -16,10 +26,14 @@ async function getWeather() {
     const current = data.list[0];
     const description = current.weather[0].description;
     const temp = Math.round(current.main.temp);
+    const emoji = getWeatherEmoji(description);
 
     document.getElementById("current-weather").innerHTML = `
-      <p><strong>${description.toUpperCase()}</strong></p>
-      <p>${temp}°C</p>
+      <div class="weather-card">
+        <p class="weather-emoji">${emoji}</p>
+        <p><strong>${description.toUpperCase()}</strong></p>
+        <p class="temp">${temp}°C</p>
+      </div>
     `;
 
     // ---- 3-DAY FORECAST ----
@@ -34,9 +48,14 @@ async function getWeather() {
       const dayTemp = Math.round(day.main.temp);
       const dayDesc = day.weather[0].description;
       const date = new Date(day.dt_txt).toLocaleDateString();
+      const dayEmoji = getWeatherEmoji(dayDesc);
 
       forecastDiv.innerHTML += `
-        <p><strong>${date}</strong>: ${dayTemp}°C, ${dayDesc}</p>
+        <div class="forecast-card">
+          <p><strong>${date}</strong></p>
+          <p class="weather-emoji">${dayEmoji}</p>
+          <p>${dayTemp}°C, ${dayDesc}</p>
+        </div>
       `;
     });
 
@@ -58,16 +77,12 @@ async function loadSpotlights() {
     );
 
     const spotlights = goldSilver.sort(() => 0.5 - Math.random()).slice(0, 3);
-
     const container = document.getElementById("spotlight-container");
     container.innerHTML = "";
 
     spotlights.forEach(member => {
       const card = document.createElement("section");
-      card.classList.add("member-card");
-
-      // Add membership level class for CSS styling
-      card.classList.add(`member-level-${member.membershipLevel}`);
+      card.classList.add("member-card", `member-level-${member.membershipLevel}`);
 
       card.innerHTML = `
         <img src="images/${member.image}" alt="${member.name}">
@@ -90,7 +105,6 @@ async function loadSpotlights() {
 const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.getElementById("nav-menu");
 
-// Make sure the class matches your CSS (base.css uses .active)
 menuToggle.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
