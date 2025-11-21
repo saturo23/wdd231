@@ -31,7 +31,10 @@
   <header>
     <img src="images/logo.svg" alt="Site Logo" class="logo">
     <span class="site-name">Mduduzi Mashanda</span>
-    <button id="menu" aria-label="Toggle Menu" aria-controls="navMenu" aria-expanded="false">&#9776;</button>
+
+    <button id="menu" aria-label="Toggle Menu" aria-controls="navMenu" aria-expanded="false">
+      &#9776;
+    </button>
 
     <nav id="navMenu">
       <a href="index.html" class="active">Home</a>
@@ -53,12 +56,15 @@
     <!-- Certificate Courses -->
     <section id="certificate">
       <h2>Certificate Courses</h2>
-      <div id="courseContainer"></div>
+
+      <div id="courseContainer" class="course-grid"></div>
+
       <div class="filters">
         <button id="all">All Courses</button>
         <button id="wdd">WDD Courses</button>
         <button id="cse">CSE Courses</button>
       </div>
+
       <p>Total Credits: <span id="totalCredits"></span></p>
     </section>
 
@@ -74,6 +80,10 @@
       <p>This project demonstrates a dynamic Chamber of Commerce directory with a weather API, spotlight members, and interactive grid/list view toggle.</p>
       <a href="chamber/index.html" class="cta-button">View Chamber Project</a>
     </section>
+
+    <!-- MODAL (EMPTY – JS will populate content) -->
+    <dialog id="course-details"></dialog>
+
   </main>
 
   <!-- Footer -->
@@ -82,7 +92,8 @@
       <a href="https://github.com/saturo23" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/mduduzi-mashanda-395051357" target="_blank">LinkedIn</a>
     </div>
-    <p>&copy; <span id="currentyear"></span> | Mduduzi Mashanda | Zimbabwe🌍</p>
+
+    <p>&copy; <span id="currentyear"></span> | Mduduzi Mashanda | Zimbabwe 🌍</p>
     <p id="lastModified"></p>
   </footer>
 </body>
