@@ -1,23 +1,32 @@
+/* === Large Screen / Desktop Styles === */
 @media (min-width: 640px) {
 
-  /* Header & Navigation */
+  /* Header */
   header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem 2rem;
   }
 
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   nav {
-    display: flex !important; /* force display for desktop */
+    display: flex !important;
     flex-direction: row;
     justify-content: center;
     gap: 2rem;
-    background: none; /* remove mobile bg */
-    position: static; /* inline with header */
+    background: none;
+    position: static;
     padding: 0;
   }
 
   #menu { 
-    display: none; /* hide hamburger on desktop */
+    display: none;
   }
 
   nav a {
@@ -25,6 +34,8 @@
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease, transform 0.2s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
   }
 
   nav a:hover,
@@ -69,5 +80,25 @@
   .total-credits {
     text-align: center;
     font-size: 1.1rem;
+  }
+
+  /* Footer */
+  footer {
+    background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+    color: white;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: bold;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
   }
 }

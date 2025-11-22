@@ -263,3 +263,33 @@ footer a:hover {
   white-space: nowrap;
   border: 0;
 }
+/* === NAVIGATION FIX === */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically center links */
+  flex-wrap: wrap;
+  gap: 2rem; /* increase spacing for better balance */
+  margin-top: 0.5rem;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem; /* adds clickable area and spacing */
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+  text-decoration: none;
+  background-color: rgba(255,255,255,0.2); /* subtle hover highlight */
+}

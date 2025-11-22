@@ -3,36 +3,39 @@
 const menuButton = document.querySelector("#menu");
 const navMenu = document.querySelector("#navMenu");
 
-// Only run if both elements exist
 if (menuButton && navMenu) {
   // Ensure ARIA is correct on load
   menuButton.setAttribute("aria-expanded", "false");
 
-  menuButton.addEventListener("click", () => {
+  menuButton.addEventListener("click", (event) => {
+    event.stopPropagation(); // prevent triggering document click
     const isOpen = navMenu.classList.toggle("show");
     menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
   // Close menu when any link is clicked
-  const navLinks = navMenu.querySelectorAll("a");
-  navLinks.forEach(link => {
+  navMenu.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("show");
       menuButton.setAttribute("aria-expanded", "false");
     });
   });
 
-  // Close if clicking outside nav + menu button
+  // Close menu if clicking outside nav and button
   document.addEventListener("click", (event) => {
-    const clickedInsideMenu = navMenu.contains(event.target);
-    const clickedMenuButton = menuButton.contains(event.target);
-
-    if (!clickedInsideMenu && !clickedMenuButton) {
+    if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
       if (navMenu.classList.contains("show")) {
         navMenu.classList.remove("show");
         menuButton.setAttribute("aria-expanded", "false");
       }
     }
   });
-}
 
+  // Optional: close menu on ESC key
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navMenu.classList.contains("show")) {
+      navMenu.classList.remove("show");
+      menuButton.setAttribute("aria-expanded", "false");
+    }
+  });
+}

@@ -1,6 +1,4 @@
-/* === Custom Styles: style.css === */
-
-/* Body */
+/* === Base Styles === */
 body {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   background-color: #f4f6f8;
@@ -10,14 +8,12 @@ body {
   line-height: 1.6;
 }
 
-/* Headings */
 h1, h2 {
-  color: #1e3a8a; /* deep, appealing blue */
+  color: #1e3a8a;
   text-align: center;
   margin-bottom: 1rem;
 }
 
-/* Paragraphs */
 p {
   max-width: 700px;
   margin: 0 auto 1rem auto;
@@ -26,7 +22,6 @@ p {
   color: #333;
 }
 
-/* Links */
 a {
   color: #1e3a8a;
   text-decoration: none;
@@ -38,7 +33,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Sections */
 section {
   padding: 1.5rem;
   background-color: #ffffff;
@@ -47,7 +41,6 @@ section {
   margin-bottom: 2rem;
 }
 
-/* Buttons */
 button {
   background: linear-gradient(90deg, #3b82f6, #1e3a8a);
   color: white;
@@ -64,10 +57,68 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* Responsive Images */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+/* === Header Styles === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+  color: white;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-bottom: 2px solid #1e3a8a;
+}
+
+header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+header .logo {
+  width: 50px;
+  height: auto;
+}
+
+header .site-name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* === Footer Styles === */
+footer {
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+  color: white;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  border-top: 2px solid #1e3a8a;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffdd57;
+  text-decoration: underline;
+}
+
+.footer-links, .social-links {
+  margin-bottom: 0.5rem;
 }

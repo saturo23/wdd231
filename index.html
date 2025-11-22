@@ -19,6 +19,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
 
   <!-- JavaScript -->
   <script src="scripts/navigation.js" defer></script>
@@ -29,8 +30,10 @@
 <body>
   <!-- Header -->
   <header>
-    <img src="images/logo.svg" alt="Site Logo" class="logo">
-    <span class="site-name">Mduduzi Mashanda</span>
+    <div class="header-left">
+      <img src="images/logo.svg" alt="Site Logo" class="logo">
+      <span class="site-name">Mduduzi Mashanda</span>
+    </div>
 
     <button id="menu" aria-label="Toggle Menu" aria-controls="navMenu" aria-expanded="false">
       &#9776;
@@ -88,11 +91,10 @@
 
   <!-- Footer -->
   <footer>
-    <div class="social">
+    <div class="footer-links">
       <a href="https://github.com/saturo23" target="_blank">GitHub</a> |
       <a href="https://www.linkedin.com/in/mduduzi-mashanda-395051357" target="_blank">LinkedIn</a>
     </div>
-
     <p>&copy; <span id="currentyear"></span> | Mduduzi Mashanda | Zimbabwe 🌍</p>
     <p id="lastModified"></p>
   </footer>

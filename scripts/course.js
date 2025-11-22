@@ -21,11 +21,7 @@ function displayCourses(list) {
       <p>${course.name}</p>
       <p>${course.credits} credits</p>
     `;
-    if (course.completed) {
-      card.style.background = '#c3e6cb';
-    } else {
-      card.style.background = '#f5c6cb';
-    }
+    card.style.background = course.completed ? '#c3e6cb' : '#f5c6cb';
     container.appendChild(card);
     creditSum += course.credits;
   });
@@ -33,8 +29,10 @@ function displayCourses(list) {
   totalCredits.textContent = creditSum;
 }
 
+// Initial load
 displayCourses(courses);
 
+// Filter buttons
 document.getElementById('all').addEventListener('click', () => displayCourses(courses));
 document.getElementById('wdd').addEventListener('click', () => displayCourses(courses.filter(c => c.type === 'WDD')));
 document.getElementById('cse').addEventListener('click', () => displayCourses(courses.filter(c => c.type === 'CSE')));
