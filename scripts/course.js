@@ -1,71 +1,40 @@
-// === Load Courses ===
-import courses from "/wdd231/scripts/course.js";
+const courses = [
+  { code: "WDD130", name: "Web Fundamentals", credits: 3, type: "WDD", completed: true },
+  { code: "WDD131", name: "Dynamic Web Fundamentals", credits: 3, type: "WDD", completed: true },
+  { code: "CSE111", name: "Programming with Functions", credits: 3, type: "CSE", completed: false },
+  { code: "CSE210", name: "Programming with Classes", credits: 3, type: "CSE", completed: false },
+  { code: "WDD231", name: "Frontend Development I", credits: 3, type: "WDD", completed: false },
+];
 
-const container = document.getElementById("courseContainer");
-const totalCredits = document.getElementById("totalCredits");
-const dialog = document.getElementById("course-details");
+const container = document.getElementById('courseContainer');
+const totalCredits = document.getElementById('totalCredits');
 
 function displayCourses(list) {
-  container.innerHTML = "";
+  container.innerHTML = '';
+  let creditSum = 0;
 
   list.forEach(course => {
-    const card = document.createElement("div");
-    card.classList.add("course-card");
-    card.dataset.id = course.number;
-
+    const card = document.createElement('div');
+    card.classList.add('course-card');
     card.innerHTML = `
-      <h3>${course.number}</h3>
+      <h3>${course.code}</h3>
       <p>${course.name}</p>
-      <p><strong>${course.credits} Credits</strong></p>
+      <p>${course.credits} credits</p>
     `;
-
-    card.addEventListener("click", () => openModal(course));
+    if (course.completed) {
+      card.style.background = '#c3e6cb';
+    } else {
+      card.style.background = '#f5c6cb';
+    }
     container.appendChild(card);
+    creditSum += course.credits;
   });
 
-  updateCredits(list);
+  totalCredits.textContent = creditSum;
 }
 
-function updateCredits(list) {
-  const sum = list.reduce((t, c) => t + c.credits, 0);
-  totalCredits.textContent = sum;
-}
-
-// === Modal ===
-function openModal(course) {
-  dialog.innerHTML = `
-    <button id="closeModal">X</button>
-    <h2>${course.number}</h2>
-    <p><strong>${course.name}</strong></p>
-    <p>Credits: ${course.credits}</p>
-    <p>${course.description}</p>
-    <p><strong>Certificate:</strong> ${course.certificate}</p>
-  `;
-
-  dialog.showModal();
-
-  document.getElementById("closeModal").addEventListener("click", () => {
-    dialog.close();
-  });
-}
-
-// Close modal when clicking outside
-dialog.addEventListener("click", (e) => {
-  const dialogBox = dialog.getBoundingClientRect();
-  if (
-    e.clientX < dialogBox.left ||
-    e.clientX > dialogBox.right ||
-    e.clientY < dialogBox.top ||
-    e.clientY > dialogBox.bottom
-  ) {
-    dialog.close();
-  }
-});
-
-// === Filters ===
-document.getElementById("all").addEventListener("click", () => displayCourses(courses));
-document.getElementById("wdd").addEventListener("click", () => displayCourses(courses.filter(c => c.number.startsWith("WDD"))));
-document.getElementById("cse").addEventListener("click", () => displayCourses(courses.filter(c => c.number.startsWith("CSE"))));
-
-// === Start ===
 displayCourses(courses);
+
+document.getElementById('all').addEventListener('click', () => displayCourses(courses));
+document.getElementById('wdd').addEventListener('click', () => displayCourses(courses.filter(c => c.type === 'WDD')));
+document.getElementById('cse').addEventListener('click', () => displayCourses(courses.filter(c => c.type === 'CSE')));

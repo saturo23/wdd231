@@ -1,28 +1,38 @@
-// navigation.js - Mobile menu toggle
+// navigation.js – Accessible Mobile Navigation Toggle
+
 const menuButton = document.querySelector("#menu");
 const navMenu = document.querySelector("#navMenu");
 
+// Only run if both elements exist
 if (menuButton && navMenu) {
+  // Ensure ARIA is correct on load
+  menuButton.setAttribute("aria-expanded", "false");
+
   menuButton.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("show");
-    menuButton.setAttribute("aria-expanded", isOpen);
+    menuButton.setAttribute("aria-expanded", isOpen ? "true" : "false");
   });
 
-  // Close menu when a link is clicked (better mobile UX)
-  navMenu.querySelectorAll("a").forEach(link => {
+  // Close menu when any link is clicked
+  const navLinks = navMenu.querySelectorAll("a");
+  navLinks.forEach(link => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("show");
       menuButton.setAttribute("aria-expanded", "false");
     });
   });
 
-  // Optional: Close menu if user clicks outside the nav
+  // Close if clicking outside nav + menu button
   document.addEventListener("click", (event) => {
-    const clickedInside = navMenu.contains(event.target) || menuButton.contains(event.target);
+    const clickedInsideMenu = navMenu.contains(event.target);
+    const clickedMenuButton = menuButton.contains(event.target);
 
-    if (!clickedInside && navMenu.classList.contains("show")) {
-      navMenu.classList.remove("show");
-      menuButton.setAttribute("aria-expanded", "false");
+    if (!clickedInsideMenu && !clickedMenuButton) {
+      if (navMenu.classList.contains("show")) {
+        navMenu.classList.remove("show");
+        menuButton.setAttribute("aria-expanded", "false");
+      }
     }
   });
 }
+
