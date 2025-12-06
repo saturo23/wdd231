@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Form Submission — Aetherion</title>
+  <meta name="description" content="Form submission output.">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner"><div class="brand"><img src="images/logo.svg" alt=""><div class="title">Aetherion</div></div><nav aria-label="Main"><ul class="nav-list"><li><a href="index.html">Home</a></li></ul></nav></div></header>
+
+  <main class="container">
+    <h1>Submission Result</h1>
+    <div id="result"></div>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>&copy; <span id="year-action"></span> Aetherion</p></div></footer>
+
+  <script>
+    document.getElementById('year-action').textContent = new Date().getFullYear();
+    (function(){
+      let data = null;
+      try {
+        const raw = sessionStorage.getItem('aetherion_contact');
+        if(raw) {
+          data = JSON.parse(raw);
+          sessionStorage.removeItem('aetherion_contact');
+        } else {
+          const params = new URLSearchParams(window.location.search);
+          if([...params.keys()].length) data = Object.fromEntries(params.entries());
+        }
+      } catch (e) { console.warn(e); }
+      const out = document.getElementById('result');
+      if(!data) {
+        out.innerHTML = '<p>No form data found. Try submitting the contact form.</p>';
+      } else {
+        out.innerHTML = '<table class="card"><thead><tr><th>Field</th><th>Value</th></tr></thead><tbody>' +
+          Object.entries(data).map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('') +
+          '</tbody></table>';
+      }
+    })();
+  </script>
+</body>
+</html>

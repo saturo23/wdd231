@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aetherion — Where Intelligence Begins—and Beyond</title>
+  <meta name="description" content="Aetherion builds software solutions and developer libraries for developers and teams.">
+  <meta name="author" content="Mduduzi Mashanda">
+  <meta property="og:title" content="Aetherion — Software Solutions & Developer Libraries">
+  <meta property="og:description" content="Aetherion creates tools and libraries that help developers ship faster.">
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/wdd231/final/styles/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="images/logo.svg" alt="Aetherion logo">
+        <div>
+          <div class="title">Aetherion</div>
+          <div class="tagline">Where Intelligence Begins—and Beyond. Powered by Aether.</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="tools.html">Technologies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="nav-menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Aetherion</h1>
+        <p class="lead">Practical software solutions and developer libraries that start small and scale into profound intelligence.</p>
+        <p><a class="btn primary" href="tools.html">Explore Technologies</a></p>
+      </div>
+      <div class="hero-right">
+        <img src="images/placeholder-1.jpg" alt="abstract tech illustration" loading="lazy" width="640" height="360">
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="features-heading">
+      <h2 id="features-heading">Our Focus</h2>
+      <div class="grid features-grid">
+        <article class="card">
+          <h3 class="feature-title">Software Solutions</h3>
+          <p>Web apps, productivity tools, and automation systems built for developers.</p>
+        </article>
+
+        <article class="card">
+          <h3 class="feature-title">Developer Libraries</h3>
+          <p>Reusable utilities to speed up development and improve code quality.</p>
+        </article>
+
+        <article class="card">
+          <h3 class="feature-title">Experimental Prototypes</h3>
+          <p>Small research projects exploring efficient text tools and AI features.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Aetherion • <a href="https://github.com/saturo23" target="_blank" rel="noopener">GitHub</a> • <a href="https://youtu.be/your-demo-link" target="_blank" rel="noopener">Demo Video</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="../final/scripts/main.js" defer></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
