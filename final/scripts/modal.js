@@ -1,24 +1,33 @@
 // modal.js
-const modal = document.getElementById('detail-modal');
-const titleEl = modal?.querySelector('#modal-title');
-const descEl = modal?.querySelector('#modal-desc');
-const featuresEl = modal?.querySelector('#modal-features');
-const linkEl = modal?.querySelector('#modal-link');
-const closeBtn = modal?.querySelector('.modal-close');
-export function openModal(item, favCallback){
-  if(!modal) return;
-  titleEl.textContent = item.name;
-  descEl.textContent = item.description;
-  featuresEl.innerHTML = (item.features||[]).map(f=>`<li>${f}</li>`).join('');
-  linkEl.href = item.link || '#';
-  // attach fav button handler if provided
-  modal.setAttribute('aria-hidden','false');
-  modal.focus();
+
+const modal = document.getElementById("detail-modal");
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-desc");
+const modalFeatures = document.getElementById("modal-features");
+const modalLink = document.getElementById("modal-link");
+const closeBtn = document.querySelector(".modal-close");
+
+export function openModal(data) {
+  modalTitle.textContent = data.name;
+  modalDesc.textContent = data.desc;
+
+  modalFeatures.innerHTML = data.features
+    .map(f => `<li>${f}</li>`)
+    .join("");
+
+  modalLink.href = data.link;
+
+  modal.setAttribute("aria-hidden", "false");
+  modal.classList.add("open");
 }
-export function closeModal(){
-  if(!modal) return;
-  modal.setAttribute('aria-hidden','true');
+
+export function closeModal() {
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
 }
-if(closeBtn) closeBtn.addEventListener('click', closeModal);
-if(modal) modal.addEventListener('click', e => { if(e.target===modal) closeModal(); });
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", e => {
+  if (e.target === modal) closeModal();
+});

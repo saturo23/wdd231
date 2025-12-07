@@ -95,3 +95,14 @@ textarea{resize:vertical}
   .brand img{width:40px;height:40px}
   .hero-left h1{font-size:1.6rem}
 }
+
+.modal.open .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-content {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all .35s ease;
+}

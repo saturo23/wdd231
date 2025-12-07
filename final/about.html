@@ -2,41 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>About — Aetherion</title>
-  <meta name="description" content="About Aetherion: mission, vision and team.">
+  <meta name="description" content="About Aetherion: mission, vision and our future direction.">
   <meta name="author" content="Mduduzi Mashanda">
-  <link rel="icon" href="images/favicon.ico">
+
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Base Styles -->
   <link rel="stylesheet" href="styles/styles.css">
+
+  <!-- Animations / Hover / Ripple -->
+  <link rel="stylesheet" href="styles/tools.css">
 </head>
+
 <body>
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <img src="images/logo.svg" alt="Aetherion logo">
-        <div><div class="title">Aetherion</div><div class="tagline">Where Intelligence Begins—and Beyond.</div></div>
+      <div class="brand hover-animate">
+        <img src="images/aether.jpg" alt="Aetherion logo">
+
+        <div>
+          <div class="title">Aetherion</div>
+          <div class="tagline">Where Intelligence Begins—and Beyond.</div>
+        </div>
       </div>
-      <nav aria-label="Main"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="tools.html">Technologies</a></li><li><a href="about.html" aria-current="page">About</a></li><li><a href="form.html">Contact</a></li></ul></nav>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools.html">Technologies</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="form.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <main class="container">
+  <!-- MAIN CONTENT -->
+  <main class="container fade-in">
     <h1>About Aetherion</h1>
-    <p>Aetherion is a software studio focused on building developer-first tools and libraries that are practical, documented, and easy to adopt. We start with web software and small libraries and aim to expand into AI-assisted development tools over time.</p>
 
-    <section>
+    <p>
+      Aetherion is a modern software studio focused on delivering developer-first
+      tools, libraries, and productivity boosters that feel intuitive, well-documented,
+      and enjoyable to use. Our journey begins with lightweight web solutions and
+      small utility libraries, gradually expanding into intelligent, AI-assisted
+      development workflows.
+    </p>
+
+    <section class="card hover-animate about-section">
       <h2>Mission</h2>
-      <p>To make powerful developer tools that reduce friction, increase productivity, and enable creators to build faster.</p>
+      <p>
+        To craft powerful and accessible developer tools that eliminate friction,
+        enhance productivity, and let creators focus on what truly matters—building.
+      </p>
     </section>
 
-    <section>
+    <section class="card hover-animate about-section">
       <h2>Vision</h2>
-      <p>To evolve Aetherion into a brand that powers intelligent development workflows and lightweight AI features accessible to small teams and solo developers.</p>
+      <p>
+        To grow Aetherion into a trusted ecosystem that fuels next-generation workflows,
+        where intelligent automation and lightweight AI help individuals and small teams
+        build faster than ever before.
+      </p>
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container"><p>&copy; <span id="year-about"></span> Aetherion</p></div></footer>
-  <script type="module" src="/wdd231/final/scripts/main.js"></script>
-  <script>document.getElementById('year-about').textContent = new Date().getFullYear();</script>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year-about"></span> Aetherion</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script type="module" src="scripts/main.js"></script>
+  <script>
+    document.getElementById("year-about").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

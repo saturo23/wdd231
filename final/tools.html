@@ -4,20 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Aetherion Technologies — Products & Libraries</title>
+
   <meta name="description" content="Browse Aetherion's software solutions and developer libraries.">
   <meta name="author" content="Mduduzi Mashanda">
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Global Styles -->
   <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <img src="images/logo.svg" alt="Aetherion logo">
-        <div><div class="title">Aetherion</div><div class="tagline">Where Intelligence Begins—and Beyond. Powered by Aether.</div></div>
+        <img src="images/aether.jpg" alt="Aetherion logo">
+        <div>
+          <div class="title">Aetherion</div>
+          <div class="tagline">Where Intelligence Begins—and Beyond. Powered by Aether.</div>
+        </div>
       </div>
 
-      <nav aria-label="Main">
+      <nav aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="tools.html" aria-current="page">Technologies</a></li>
@@ -25,6 +32,11 @@
           <li><a href="form.html">Contact</a></li>
         </ul>
       </nav>
+
+      <!-- Hamburger will be handled by JS later -->
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <img src="images/menu.svg" alt="" width="28" height="28">
+      </button>
     </div>
   </header>
 
@@ -32,7 +44,7 @@
     <section class="controls" aria-label="Filter and search">
       <div class="controls-row">
         <label for="search">Search</label>
-        <input id="search" type="search" placeholder="Search products, libraries...">
+        <input id="search" type="search" placeholder="Search products, libraries…" autocomplete="off">
 
         <label for="category">Category</label>
         <select id="category" aria-controls="tools-list">
@@ -50,24 +62,29 @@
     <div id="no-results" class="no-results" hidden>No items found.</div>
   </main>
 
-  <!-- modal -->
+  <!-- Modal -->
   <div id="detail-modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
     <div class="modal-content" role="document">
       <button class="modal-close" aria-label="Close dialog">&times;</button>
+
       <h2 id="modal-title"></h2>
       <p id="modal-desc"></p>
+
       <ul id="modal-features"></ul>
+
       <p><a id="modal-link" target="_blank" rel="noopener">Learn more</a></p>
     </div>
   </div>
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year-tools"></span> Aetherion • <a href="index.html">Home</a></p>
+      <p>&copy; <span id="year-tools"></span> Aetherion • 
+        <a href="index.html">Home</a>
+      </p>
     </div>
   </footer>
 
-  <script type="module" src="js/main.js"></script>
-  <script>document.getElementById('year-tools').textContent = new Date().getFullYear();</script>
+  <!-- Main module script -->
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>

@@ -1,24 +1,43 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Aetherion</title>
+
   <meta name="description" content="Contact Aetherion for services, internships, or collaborations.">
   <meta name="author" content="Mduduzi Mashanda">
+
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand"><img src="images/logo.svg" alt="Aetherion logo"><div><div class="title">Aetherion</div></div></div>
-      <nav aria-label="Main"><ul class="nav-list"><li><a href="index.html">Home</a></li><li><a href="tools.html">Technologies</a></li><li><a href="about.html">About</a></li><li><a href="form.html" aria-current="page">Contact</a></li></ul></nav>
+      <div class="brand">
+        <img src="images/aether.jpg" alt="Aetherion logo">
+        <div>
+          <div class="title">Aetherion</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="tools.html">Technologies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main class="container">
     <h1>Contact</h1>
-    <form id="contact-form" class="form-grid" method="POST" action="form-action.html" novalidate>
+
+    <form id="contact-form" class="form-grid" novalidate>
       <label for="fullName">Full name</label>
       <input id="fullName" name="fullName" type="text" required>
 
@@ -41,21 +60,13 @@
     </form>
   </main>
 
-  <footer class="site-footer"><div class="container"><p>&copy; <span id="year-form"></span> Aetherion • <a href="index.html">Home</a></p></div></footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Aetherion • <a href="index.html">Home</a></p>
+    </div>
+  </footer>
 
-  <script type="module" src="js/main.js"></script>
-  <script>
-    document.getElementById('year-form').textContent = new Date().getFullYear();
-    // For static hosting: intercept submit, save to sessionStorage and redirect to action page
-    (function(){
-      const form = document.getElementById('contact-form');
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const data = Object.fromEntries(new FormData(form).entries());
-        sessionStorage.setItem('aetherion_contact', JSON.stringify(data));
-        window.location.href = 'form-action.html';
-      });
-    })();
-  </script>
+  <!-- Only one script entry point -->
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
